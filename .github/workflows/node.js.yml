@@ -20,7 +20,10 @@ jobs:
           npm run build
   
   test:
-    runs-on: ubuntu-latest
+      - uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
     strategy:
       matrix:
         os: [ubuntu-latest, windows-2016]
