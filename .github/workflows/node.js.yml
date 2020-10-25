@@ -22,7 +22,7 @@ jobs:
   test:
       - uses: actions/upload-artifact@master
         with:
-          name: webpack artifacts
+    needs: build
           path: public/
     strategy:
       matrix:
